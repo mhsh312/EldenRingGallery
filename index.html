@@ -5,7 +5,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Gallery</title>
-    <link rel="stylesheet" href="https://github.com/mhsh312/EldenRingGallery/blob/master/styles.css">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    opacity: 0;
+}
+
+html,
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin: 1.5rem;
+}
+
+#wrapper {
+    position: relative;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    height: 90rem;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+.card {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    transition: 0.5s;
+    cursor: pointer;
+    box-shadow: 0 0 10px #333;
+}
+
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 20px #333;
+}
+
+.card:hover .imgtext,
+.card:hover img {
+    opacity: 1;
+    filter: grayscale(0%);
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+    position: absolute;
+}
+
+.imgtext {
+    position: absolute;
+    position: absolute;
+    color: white;
+    padding: 15px;
+    opacity: 0;
+    font-size: 25px;
+    width: 100%;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+}
+    </style>
 </head>
 
 <body>
